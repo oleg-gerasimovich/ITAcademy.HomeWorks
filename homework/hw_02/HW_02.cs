@@ -6,3 +6,25 @@
 //кода в картинку
 //6.создание файла с картинкой
 //7.очистка мусора
+using System;
+using System.IO;
+namespace CSPhomework
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            StreamReader textReader = new StreamReader(@"/Users/oleggerasimovich/Desktop/image.txt", true);
+            string textReaderResault = textReader.ReadToEnd();
+            string[] arrayOfTextResault = textReaderResault.Split(' ');
+            byte[] imageBytes = new byte[arrayOfTextResault.Length - 1];
+            for (int i=0; i< arrayOfTextResault.Length - 1; i++)
+            {
+                byte binary = Convert.ToByte(arrayOfTextResault[i], 2);
+                imageBytes[i] = binary;
+            }
+            File.WriteAllBytes(@"/Users/oleggerasimovich/Desktop/converted.png", imageBytes);
+            textReader.Dispose();
+        }
+    }
+}
