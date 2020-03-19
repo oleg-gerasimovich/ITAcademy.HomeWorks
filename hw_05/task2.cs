@@ -14,7 +14,7 @@ namespace CSPhomework
                 switch (way[i + 1])
                 {
                     case 'w':
-                        Console.WriteLine("Press w");
+                        Console.WriteLine("Press w to go forward");
                         press = Convert.ToString(Console.ReadLine());
                         do
                         {
@@ -27,7 +27,7 @@ namespace CSPhomework
                             break;
 
                     case 'd':
-                        Console.WriteLine("Press d");
+                        Console.WriteLine("Press d to go right");
                         press = Convert.ToString(Console.ReadLine());
                         do
                         {
@@ -39,7 +39,7 @@ namespace CSPhomework
                         } while (press != "d");
                         break;
                     case 's':
-                        Console.WriteLine("Press s");
+                        Console.WriteLine("Press s to go backward");
                         press = Convert.ToString(Console.ReadLine());
                         do
                         {
@@ -51,7 +51,7 @@ namespace CSPhomework
                         } while (press != "s");
                         break;
                     case 'a':
-                        Console.WriteLine("Press a");
+                        Console.WriteLine("Press a to go left");
                         press = Convert.ToString(Console.ReadLine());
                         do
                         {
