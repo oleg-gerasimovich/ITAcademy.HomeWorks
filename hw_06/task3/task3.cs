@@ -6,7 +6,7 @@ namespace CSPlections
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("**** Task2 ****");
+            Console.WriteLine("**** Task3 ****");
             int[] array = new int[10];
             Random random = new Random();
             var sw = new Stopwatch();
